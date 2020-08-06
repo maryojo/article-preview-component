@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;500;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Manrope',Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0px;
+    background-color: hsl(210, 46%, 95%);
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 2px 10px 60px #888;
+    background-color: white;
+}
+
+.image{
+    height: 300px;
+    width: 300px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.text-container{
+    padding: 40px;
+}
+
+.heading{
+    margin-top: 0px;
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+}
+
+.description{
+    font-size: 13px;
+    font-weight: 500;
+    color: hsl(214, 17%, 51%);
+}
+
+.post-description{
+    display: flex;
+    flex-direction: row;
+    font-size: 13px;
+    position: relative;
+    margin-top: 30px;
+}
+
+.avatar{
+    height: 40px;
+    border-radius: 50%;
+}
+
+p.username, p.date{
+    margin: 0px;
+}
+
+.user-description{
+    margin-left: 20px;
+}
+
+.username{
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+}
+
+.date{
+    color: hsl(214, 17%, 51%);
+    font-weight: 500;
+    padding-top: 5px;
+}
+
+.share{
+    height: 25px;
+    position: absolute;
+    right: 5%;
+    top: 30%;
+    border-radius: 50%;
+    padding: 5px;
+    color: hsl(217, 19%, 35%);
+    background-color: hsl(210, 46%, 95%);
+    cursor: pointer;
+}
+
+.tooltipShare{
+    visibility: hidden;
+    width: 200px;
+    height: 50px;
+    padding: 15px;
+    color: #fff;
+    background-color: hsl(217, 19%, 35%);
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0.5px 1px 5px #888;
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+    z-index: 1;
+}
+
+.tooltipIcon{
+    padding-left: 10px;
+}
+
+.sm-icons{
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+.sharetext{
+    color: hsl(210, 46%, 95%);
+    font-weight: 200;
+    position: absolute;
+    top: 32%;
+    left: 30px;
+}
+
+.tooltipShare::after{
+    content:"";
+    position: absolute;
+    right: 13%;
+    bottom: -14px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+}
+
+.insideShare{
+    visibility: hidden;
+    height: 30px;
+    position: absolute;
+    right: 11%;
+    top: 20%;
+    border-radius: 50%;
+    padding: 10px;
+    color: hsl(217, 19%, 35%);
+    background-color: hsl(210, 46%, 95%);
+    cursor: pointer;
+
+}
+
+/* .tooltipShare:hover .tooltipIcon{
+    visibility: hidden;
+} */
+
+@media(max-width: 943px){
+    .container{
+        flex-direction: column;
+        width: 300px;
+        height: 530px;
+    }
+    .text-container{
+        width: 100%;
+        padding: 0px;
+    }
+
+    .maintext{
+        padding: 30px 30px 0px 30px;
+    }
+
+    .image{
+        height: 200px;
+        width: 300px;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .post-description{
+        padding: 0px 30px 30px 30px;
+        margin-top: 25px;
+    }
+
+    .date{
+        padding-top: 3px;
+    }
+
+    .share{
+        height: 25px;
+        position: absolute;
+        right: 11%;
+        top: 17%;
+        border-radius: 50%;
+        padding: 5px;
+        color: hsl(217, 19%, 35%);
+        background-color: hsl(210, 46%, 95%);
+        cursor: pointer;
+    }
+
+    .tooltipShare{
+        visibility: hidden;
+        width: 300px;
+        height: 70px;
+        padding: 15px;
+        color: #fff;
+        background-color: hsl(217, 19%, 35%);
+        text-align: center;
+        border-radius: 0px 0px 10px 10px;
+        position: absolute;
+        bottom: 3px;
+        right: 0px;
+        z-index: 1;
+        margin-bottom: 0px;
+    }
+
+    .insideShare{
+        visibility: visible;
+    }
+
+    .sm-icons{
+        right: 35%;
+    }
+
+    .tooltipShare::after{ 
+        display: none;
+    }
+    
+    .tooltipIcon{
+        padding-left: 10px;
+        margin-top: 7px;
+    }
+}
+
+
